@@ -25,8 +25,9 @@ RUN apt-get update && apt-get install -y \
     zip \
     cron \
     git \
-    libssh2-1-dev
-        
+    libssh2-1-dev \
+    locales-all
+
 RUN docker-php-ext-install -j$(nproc) curl \
     && docker-php-ext-install -j$(nproc) bcmath \
     && docker-php-ext-install -j$(nproc) mbstring \
