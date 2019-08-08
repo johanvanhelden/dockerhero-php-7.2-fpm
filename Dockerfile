@@ -20,8 +20,6 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libxml2-dev \
     libxslt1-dev \
-    msmtp \
-    msmtp-mta \
     autoconf \
     zip \
     cron \
@@ -70,7 +68,7 @@ COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 COPY ./dockerhero.fpm.conf /usr/local/etc/php-fpm.d/zzz-dockerhero.fpm.conf
 COPY ./dockerhero.php.ini /usr/local/etc/php/conf.d/dockerhero.php.ini
 
-# Setup msmtp
+# Setup mhsendmail
 COPY ./mhsendmail_linux_amd64 /usr/local/bin/mhsendmail
 RUN chmod +x /usr/local/bin/mhsendmail
 
